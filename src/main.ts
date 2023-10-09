@@ -39,7 +39,7 @@ async function ExportIPA(
         .Append('--sdk', 'iphoneos')
         .Append('--export_team_id', core.getInput('team-id'))
         .Append('--skip_profile_detection')
-        .Append('-exportProvisioningProfile',core.getInput('provisioning-profile-name'))
+        .Append('--exportProvisioningProfile',core.getInput('provisioning-profile-name'))
 
     try {
         const workspace = path.join(projectDirectory, 'Unity-iPhone.xcworkspace')
